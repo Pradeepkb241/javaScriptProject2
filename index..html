@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>returant app</title>
+</head>
+<body>
+    <form onsubmit  ="addToBill(event)">
+        <label >Choose Price: </label>
+        <input id="price" type="number" name="price" required>
+        <label >Choose dish: </label>
+        <input id="dish" type="text" name="dish" required>
+
+        <label >Choose a Table: </label>
+        <select  id="table">
+            <option value="1" >table 1</option>
+            <option value="2" >table 2</option>
+            <option value="3" >table 3</option>
+        </select>
+        <button>Add To Bill</button>
+    </form>
+    <h1>Orders</h1>
+
+    <div>
+        <h3>Table 1</h3>
+        <ul id="listOfItem"></ul>
+    </div>
+    <div>
+        <h3>Table 2</h3>
+        <ul id="listOfItem1"></ul>
+    </div>
+    <div>
+        <h3>Table 3</h3>
+        <ul id="listOfItem2"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+    <script src="orders.js"></script>
+</body>
+</html>
